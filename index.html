@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Password Generator</title>
+</head>
+<body>
+   <div class="container">
+    <h1>Password Generator</h1>
+    <label for="length">Password Length:</label>
+    <input type="number" id="length" name="length" min="4" max="24" value="8">
+    <br><br>
+    <input type="checkbox" id="includeUppercase" checked>
+    <label for="includeUppercase">Include Uppercase Letters</label>
+    <br>
+    <input type="checkbox" id="includeLowercase" checked>
+    <label for="includeLowercase">Include Lowercase Letters</label>
+    <br>
+    <input type="checkbox" id="includeNumbers" checked>
+    <label for="includeNumbers">Include Numbers</label>
+    <br>
+    <input type="checkbox" id="includeSymbols" checked>
+    <label for="includeSymbols">Include Symbols</label>
+    <br><br>
+    <button id="generateBtn" onclick="generatePassword()">Generate Password</button>
+    <h2>Your Generated Password:</h2>
+    <div class="password-wrapper">
+        <textarea id="passwordOutput" rows="1" cols="24" readonly></textarea> 
+        <button id="copyBtn"><i class="fa-regular fa-copy"></i></button> 
+    </div>
+   
+   </div> 
+</body>
+</html>
